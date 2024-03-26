@@ -4,7 +4,7 @@ import SingleBookCard from "../SingleBookCardHome/SingleBookCard";
 
 const BookCardHome = () => {
   const { books } = useBookData();
-  console.log(books);
+  
 
   return (
     <div className="mt-24 max-w-6xl mx-auto">

@@ -6,6 +6,7 @@ import ListedBook from "../Pages/ListedBook/ListedBook";
 import PageRead from "../Pages/PageRad/PageRead";
 import Author from "../Pages/Author/Author";
 import Blog from "../Pages/Blog/Blog";
+import BookDetails from "../Pages/BookDetails/BookDetails";
 
 
 const router = createBrowserRouter([
@@ -35,8 +36,9 @@ const router = createBrowserRouter([
             element: <Blog></Blog>
         },
         {
-          path: "/book-details/${bookId}",
-          element:
+          path: "/book-details/:id",
+          element: <BookDetails></BookDetails>,
+          loader: () => fetch('../data.json')
         }
       ]
     },
