@@ -11,7 +11,7 @@
     "tags": ["Suspense", "Psychological"],
     "publisher": "Celadon Books",
     "yearOfPublishing": 2019,
-    "authorImage": "alex_michaelides.jpg"
+    "authorImage": "https://i.ibb.co/fX9wLLx/aa1.jpg"
     },
     {
     "bookId": 2,
@@ -25,7 +25,7 @@
     "tags": ["Inspiring", "Memoir"],
     "publisher": "Random House",
     "yearOfPublishing": 2018,
-    "authorImage": "tara_westover.jpg"
+    "authorImage": "https://i.ibb.co/tqjpNWg/aa2.jpg"
     },
     {
     "bookId": 3,
@@ -39,7 +39,7 @@
     "tags": ["Magical Realism", "Romance"],
     "publisher": "Anchor Books",
     "yearOfPublishing": 2011,
-    "authorImage": "erin_morgenstern.jpg"
+    "authorImage": "https://i.ibb.co/MVNDXTn/aa3.jpg"
     },
     {
     "bookId": 4,
@@ -53,7 +53,7 @@
     "tags": ["Anthropology", "Philosophy"],
     "publisher": "Harper",
     "yearOfPublishing": 2014,
-    "authorImage": "yuval_noah_harari.jpg"
+    "authorImage": "https://i.ibb.co/fGRH1y9/aa4.jpg"
     },
     {
     "bookId": 5,
@@ -67,7 +67,7 @@
     "tags": ["Motivational", "Personal Growth"],
     "publisher": "HarperOne",
     "yearOfPublishing": 2016,
-    "authorImage": "mark_manson.jpg"
+    "authorImage": "https://i.ibb.co/ynf4Gr2/aa5.jpg"
     },
     {
     "bookId": 6,
@@ -81,7 +81,7 @@
     "tags": ["Philosophical", "Spiritual"],
     "publisher": "HarperCollins",
     "yearOfPublishing": 1988,
-    "authorImage": "paulo_coelho.jpg"
+    "authorImage": "https://i.ibb.co/GVs51jb/aa7.jpg"
     },
     {
         "bookId": 7,
@@ -95,7 +95,7 @@
         "tags": ["Fantasy", "Adventure"],
         "publisher": "George Allen & Unwin",
         "yearOfPublishing": 1954,
-        "authorImage": "paulo_coelho.jpg"
+        "authorImage": "https://i.ibb.co/jy7ZtV1/aa7.jpg"
     },
     {
         "bookId": 8,
@@ -109,7 +109,7 @@
         "tags": ["Romance", "Comedy of manners"],
         "publisher": "T. Egerton, Whitehall",
         "yearOfPublishing": 1813,
-        "authorImage": "paulo_coelho.jpg"
+        "authorImage": "https://i.ibb.co/5Bb7HJf/aa8.jpg"
       },
       {
         "bookId": 9,
@@ -123,6 +123,6 @@
         "tags": ["Dystopian", "Political fiction"],
         "publisher": "Secker & Warburg",
         "yearOfPublishing": 1949,
-        "authorImage": "paulo_coelho.jpg"
+        "authorImage": "https://i.ibb.co/bLmHDBw/aa9.jpg"
       }
 ]
