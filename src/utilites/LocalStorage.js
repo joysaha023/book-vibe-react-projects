@@ -1,21 +1,16 @@
-
-
-const getStoredData = () => {
-    const storedData = localStorage.getItem('read-book');
-    if(storedData){
-        return JSON.parse(storedData);
+export const saveDataToLocalStorage = (book) => {
+    const savedData = JSON.parse(localStorage.getItem("jobs")) || [];
+    const dataExists = savedData.find((item) => item.bookId == book.bookId);
+    if(dataExists){
+        alert("Already exists")
+    }else{
+        savedData.push(book);
+        localStorage.setItem("jobs", JSON.stringify(savedData));
     }
-    return [];
+};
+
+
+export const getDataFromLocal = () => {
+    const getDefaultData = JSON.parse(localStorage.getItem("jobs")) || [];
+    return getDefaultData;
 }
-
-const saveBookData = id => {
-    const storedDatabook = getStoredData();
-    const exists = storedDatabook.find(bookId => bookId === id);
-    if(!exists) {
-        storedDatabook.push(id);
-        localStorage.setItem('read-book', JSON.stringify(storedDatabook))
-    }
-}
-
-
-export {getStoredData, saveBookData}

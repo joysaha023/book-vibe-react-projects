@@ -3,7 +3,9 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Hashtag from "../../components/HashTag/Hashtag";
-import { saveBookData } from "../../utilites/LocalStorage";
+import { saveDataToLocalStorage } from "../../utilites/LocalStorage";
+
+
 
 
 const BookDetails = () => {
@@ -14,7 +16,7 @@ const BookDetails = () => {
   
 
   const handleReadBook = () => {
-    saveBookData(idInt)
+    saveDataToLocalStorage(book);
     toast('you have read ')
   }
 
