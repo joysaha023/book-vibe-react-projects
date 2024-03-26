@@ -1,33 +1,43 @@
 import React, { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import useBookData from "../../Hooks/useBookData";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Hashtag from "../../components/HashTag/Hashtag";
+import { saveBookData } from "../../utilites/LocalStorage";
+
 
 const BookDetails = () => {
   const { id } = useParams();
   const idInt = parseInt(id);
   const books = useLoaderData();
   const book = books.find((book) => book.bookId === idInt);
-  console.log(book);
+  
+
+  const handleReadBook = () => {
+    saveBookData(id)
+    toast('you have read ')
+  }
+
+
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto my-4">
       <div className="card lg:card-side bg-base-100 mx-1 shadow-none">
         <figure className="bg-[#F3F3F3] rounded-lg p-20">
           <img src={book.image} alt="Movie" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{book.bookName}</h2>
-          <span>By : {book.author}</span>
+          <h2 className="card-title text-4xl font-bold">{book.bookName}</h2>
+          <span className="text-xl font-medium">By : {book.author}</span>
           <div className="flex flex-col my-3 w-full">
             <div className="border border-dashed"></div>
           </div>
-          <span>{book.category}</span>
+          <span className="text-xl font-medium">{book.category}</span>
           <div className="flex flex-col my-3 w-full">
             <div className="border border-dashed"></div>
           </div>
-          <p>Review: {book.review}</p>
+          <p className="text-base"><span className="font-bold">Review:</span> {book.review}</p>
           <div className="flex  gap-3">
-            <h2>tag</h2>
+            <h2 className="text-base font-bold">Tag</h2>
             {book.tags.map((tag, idx) => (
               <Hashtag key={idx} tag={tag}></Hashtag>
             ))}
@@ -39,26 +49,28 @@ const BookDetails = () => {
             <div className="">
               <div className="flex gap-5">
                 <h2>Number of Pages:</h2>
-                <h2>{book.totalPages}</h2>
+                <h2 className="font-semibold">{book.totalPages}</h2>
               </div>
               <div  className="flex gap-[76px]">
                 <h2>Publisher:</h2>
-                <h2>{book.publisher}</h2>
+                <h2 className="font-semibold">{book.publisher}</h2>
               </div>
               <div  className="flex gap-[14px]">
                 <h3>Year of Publishing:</h3>
-                <h2>{book.yearOfPublishing}</h2>
+                <h2 className="font-semibold">{book.yearOfPublishing}</h2>
               </div>
               <div  className="flex gap-[100px]">
                 <h4>Rating:</h4>
-                <h2>{book.rating}</h2>
+                <h2 className="font-semibold">{book.rating}</h2>
               </div>
             </div>
           </div>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Watch</button>
+          <div className="card-actions mt-2 justify-start">
+            <button onClick={handleReadBook} className="btn btn-ghost border border-black hover:text-white hover:bg-[#23BE0A] btn-primary">Read</button>
+            <button className="btn bg-[#50B1C9] text-white  hover:text-black">Watch</button>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </div>
   );
