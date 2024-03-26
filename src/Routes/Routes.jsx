@@ -33,6 +33,10 @@ const router = createBrowserRouter([
         {
             path: "/blog",
             element: <Blog></Blog>
+        },
+        {
+          path: "/book-details/${bookId}",
+          element:
         }
       ]
     },

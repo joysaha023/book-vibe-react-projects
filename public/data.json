@@ -1,9 +1,9 @@
 [
     {
     "bookId": 1,
-    "bookName": "The Silent Patient",
+    "bookName": "The Dating Playbook For Man",
     "author": "Alex Michaelides",
-    "image": "silent_patient.jpg",
+    "image": "https://i.ibb.co/HYt5XJq/bb1.png",
     "review": "A gripping psychological thriller that keeps you guessing until the very end.",
     "totalPages": 336,
     "rating": 4.5,
@@ -15,9 +15,9 @@
     },
     {
     "bookId": 2,
-    "bookName": "Educated",
+    "bookName": "Why Do You Hate Money",
     "author": "Tara Westover",
-    "image": "educated.jpg",
+    "image": "https://i.ibb.co/2KY1fCR/bb2.png",
     "review": "A remarkable memoir of resilience and self-discovery.",
     "totalPages": 352,
     "rating": 4.7,
@@ -29,9 +29,9 @@
     },
     {
     "bookId": 3,
-    "bookName": "The Night Circus",
+    "bookName": "The Hate You Give",
     "author": "Erin Morgenstern",
-    "image": "night_circus.jpg",
+    "image": "https://i.ibb.co/JK6YmgT/bb3.png",
     "review": "An enchanting tale of magic, love, and mystery.",
     "totalPages": 400,
     "rating": 4.4,
@@ -43,9 +43,9 @@
     },
     {
     "bookId": 4,
-    "bookName": "Sapiens: A Brief History of Humankind",
+    "bookName": "The Scholarship Monthly Planner",
     "author": "Yuval Noah Harari",
-    "image": "sapiens.jpg",
+    "image": "https://i.ibb.co/jHwsmYJ/bb4.png",
     "review": "A thought-provoking exploration of human history and civilization.",
     "totalPages": 464,
     "rating": 4.6,
@@ -57,9 +57,9 @@
     },
     {
     "bookId": 5,
-    "bookName": "The Subtle Art of Not Giving a F*ck",
+    "bookName": "Annotated Texas Family Code",
     "author": "Mark Manson",
-    "image": "subtle_art.jpg",
+    "image": "https://i.ibb.co/m9Rjb1z/bb5.png",
     "review": "A refreshing and blunt take on living a good life amidst chaos.",
     "totalPages": 224,
     "rating": 4.2,
@@ -71,9 +71,9 @@
     },
     {
     "bookId": 6,
-    "bookName": "The Alchemist",
+    "bookName": "Loving Jesus More",
     "author": "Paulo Coelho",
-    "image": "alchemist.jpg",
+    "image": "https://i.ibb.co/MgX1KnW/bb6.png",
     "review": "A timeless tale of following your dreams and destiny.",
     "totalPages": 208,
     "rating": 4.3,
@@ -82,5 +82,47 @@
     "publisher": "HarperCollins",
     "yearOfPublishing": 1988,
     "authorImage": "paulo_coelho.jpg"
-    }
-    ]
+    },
+    {
+        "bookId": 7,
+        "bookName": "The Lost Art of Conversation",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/5rY5hDS/bb7.png",
+        "review": "The Lord of the Rings is an epic fantasy that transports readers to a meticulously crafted world filled with adventure and heroism.",
+        "totalPages": 1178,
+        "rating": 4.9,
+        "category": "Fiction",
+        "tags": ["Fantasy", "Adventure"],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublishing": 1954,
+        "authorImage": "paulo_coelho.jpg"
+    },
+    {
+        "bookId": 8,
+        "bookName": "Cold Case Cristianity",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/DL5YQKt/bb8.png",
+        "review": "Pride and Prejudice is a timeless romance with witty dialogue and memorable characters.",
+        "totalPages": 432,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["Romance", "Comedy of manners"],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813,
+        "authorImage": "paulo_coelho.jpg"
+      },
+      {
+        "bookId": 9,
+        "bookName": "Spine Of The Dragon",
+        "author": "George Orwell",
+        "image": "https://i.ibb.co/BfkkrqL/bb9.png",
+        "review": "1984 is a dystopian masterpiece that offers a chilling vision of a totalitarian regime.",
+        "totalPages": 328,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": ["Dystopian", "Political fiction"],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949,
+        "authorImage": "paulo_coelho.jpg"
+      }
+]

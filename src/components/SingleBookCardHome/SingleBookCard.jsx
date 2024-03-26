@@ -1,24 +1,40 @@
 import React from "react";
+import { FaRegStar } from "react-icons/fa6";
+import Hashtag from "../HashTag/Hashtag";
+import { Link } from "react-router-dom";
 
 const SingleBookCard = ({item}) => {
-    const {bookName} = item || {}
+    const {bookName, image, bookId, author, category, rating, tags} = item || {}
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
-      <figure>
+    <Link to={`/book-details/${bookId}`} className="card h-full w-full bg-base-100 shadow-none border">
+      <figure className="bg-[#F3F3F3] rounded-xl py-8 m-6">
         <img
-          src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+          src={image}
           alt="Shoes"
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{bookName}</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+        <div className="flex items-center gap-3">
+          {
+            tags.map((tag, idx) => <Hashtag key={idx} tag={tag}></Hashtag>)
+          }
+        </div>
+      
+        <h2 className="card-title text-2xl font-bold">{bookName}</h2>
+        <p className="text-base font-medium">By : {author}</p>
+        <div className="flex flex-col my-3 w-full">
+         <div className="border border-dashed"></div>
+        </div>
+        <div className="flex justify-between items-center">
+          <p className="text-base font-medium">{category}</p>
+          <div className="flex items-center gap-2">
+            <p className="text-base font-medium">{rating}</p>
+            <p className="text-lg font-medium"><FaRegStar /></p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
