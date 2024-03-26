@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Hashtag from "../../components/HashTag/Hashtag";
 import { saveDataToLocalStorage } from "../../utilites/LocalStorage";
+import { toast } from "react-toastify";
 
 
 
@@ -17,7 +16,7 @@ const BookDetails = () => {
 
   const handleReadBook = () => {
     saveDataToLocalStorage(book);
-    toast('you have read ')
+    
   }
 
 
@@ -72,7 +71,7 @@ const BookDetails = () => {
             <button className="btn bg-[#50B1C9] text-white  hover:text-black">Watch</button>
           </div>
         </div>
-        <ToastContainer />
+       
       </div>
     </div>
   );
