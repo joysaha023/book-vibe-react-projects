@@ -14,7 +14,7 @@ const BookDetails = () => {
   
 
   const handleReadBook = () => {
-    saveBookData(id)
+    saveBookData(idInt)
     toast('you have read ')
   }
 

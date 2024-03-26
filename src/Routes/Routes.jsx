@@ -8,40 +8,41 @@ import Author from "../Pages/Author/Author";
 import Blog from "../Pages/Blog/Blog";
 import BookDetails from "../Pages/BookDetails/BookDetails";
 
-
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root></Root>,
-      errorElement: <ErrorPage></ErrorPage>,
-      children: [
-        {
-            path: "/",
-            element: <Home></Home>
-        },
-        {
-            path: "/listedBooks",
-            element: <ListedBook></ListedBook>
-        },
-        {
-            path: "/pageRead",
-            element: <PageRead></PageRead>
-        },
-        {
-            path: "/authorSec",
-            element: <Author></Author>
-        },
-        {
-            path: "/blog",
-            element: <Blog></Blog>
-        },
-        {
-          path: "/book-details/:id",
-          element: <BookDetails></BookDetails>,
-          loader: () => fetch('../data.json')
-        }
-      ]
-    },
-  ]);
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/listedBooks",
+        element: <ListedBook></ListedBook>,
+        loader: () => fetch("/data.json")
+        
+      },
+      {
+        path: "/pageRead",
+        element: <PageRead></PageRead>,
+      },
+      {
+        path: "/authorSec",
+        element: <Author></Author>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/book-details/:id",
+        element: <BookDetails></BookDetails>,
+        loader: () => fetch("/data.json"),
+      },
+    ],
+  },
+]);
 
 export default router;
