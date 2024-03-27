@@ -42,7 +42,7 @@ const WishBookList = ({ readBook }) => {
           </div>
           <div className="card-actions justify-star">
           <button className="btn-sm bg-blue-100 text-base font-medium border-0 text-[#328EFF] rounded-full">Category : {readBook.category}</button>
-          <button className="btn-sm bg-orange-100 text-base font-medium border-0 text-[#FFAC33] rounded-full">Category : {readBook.rating}</button>
+          <button className="btn-sm bg-orange-100 text-base font-medium border-0 text-[#FFAC33] rounded-full">Rating : {readBook.rating}</button>
             <Link to={`/book-details/${readBook.bookId}`} className="btn btn-sm rounded-full bg-[#23BE0A] text-white">View Details</Link>
           </div>
         </div>
