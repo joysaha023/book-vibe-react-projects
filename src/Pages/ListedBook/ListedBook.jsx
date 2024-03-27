@@ -18,7 +18,6 @@ const ListedBook = () => {
       }
       else if (filter === 'rating'){
         const temp = readBooksData.sort((a, b) => b.rating - a.rating);
-        // console.log(desendingData)
         setSortBookData(temp)
       }
       else if(filter === 'pages'){
