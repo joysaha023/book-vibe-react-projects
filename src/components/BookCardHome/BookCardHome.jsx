@@ -11,8 +11,8 @@ const BookCardHome = () => {
   }
 
   return (
-    <div className="mt-24 max-w-6xl mx-auto">
-      <h2 className="text-4xl text-center mb-8 font-bold">Books</h2>
+    <div className="mt-10 md:mt-24 max-w-6xl mx-auto">
+      <h2 className="text-4xl text-center mb-10 font-bold">Books</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 mx-3 gap-6">
         {books.slice(0, seeAll ? books.length : 6).map((item) => (
           <SingleBookCard key={item.id} item={item}></SingleBookCard>

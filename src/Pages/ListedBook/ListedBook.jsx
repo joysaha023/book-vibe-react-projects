@@ -17,23 +17,24 @@ const ListedBook = () => {
 
   const handleSortBookData = (filter) => {
     if (filter === "all") {
-      setSortBookData(readBooksData);
-      setWishSortBook(wishBookData);
+      setSortBookData([...readBooksData]);
+      setWishSortBook([...wishBookData]);
     } else if (filter === "rating") {
-      const temp = readBooksData.sort((a, b) => b.rating - a.rating);
-      const temp2 = wishBookData.sort((a, b) => b.rating - a.rating);
+      const temp = [...readBooksData].sort((a, b) => b.rating - a.rating);
+      const temp2 = [...wishBookData].sort((a, b) => b.rating - a.rating);
       setSortBookData(temp);
       setWishSortBook(temp2);
+     
     } else if (filter === "pages") {
-      const pages = readBooksData.sort((a, b) => b.totalPages - a.totalPages);
-      const pages2 = wishBookData.sort((a, b) => b.totalPages - a.totalPages);
+      const pages = [...readBooksData].sort((a, b) => b.totalPages - a.totalPages);
+      const pages2 = [...wishBookData].sort((a, b) => b.totalPages - a.totalPages);
       setSortBookData(pages);
       setWishSortBook(pages2)
     } else if (filter === "year") {
-      const year = readBooksData.sort(
+      const year = [...readBooksData].sort(
         (a, b) => b.yearOfPublishing - a.yearOfPublishing
       );
-      const year2 = wishBookData.sort(
+      const year2 = [...wishBookData].sort(
         (a, b) => b.yearOfPublishing - a.yearOfPublishing
       );
       setSortBookData(year);
@@ -50,7 +51,7 @@ const ListedBook = () => {
   useEffect(() => {
     const wishData = getDataFromWishLocal();
     setWishBookData(wishData);
-    setWishSortBook(wishData)
+    setWishSortBook(wishData);
   }, [])
 
   const links = (
@@ -75,7 +76,7 @@ const ListedBook = () => {
       <div className="bg-gray-200 rounded-lg  text-center">
         <h2 className="py-3 lg:py-6 text-xl lg:text-3xl font-bold">Book</h2>
       </div>
-      <div className="dropdown flex justify-center mt-8">
+      <div className="dropdown flex justify-center my-4 md:my-8">
         <div
           tabIndex={0}
           role="button"
@@ -97,7 +98,7 @@ const ListedBook = () => {
             <Tab>Read Books</Tab>
             <Tab>Wishlist Books</Tab>
           </TabList>
-          <TabPanel>
+          <TabPanel className="mx-2">
             {sortBookData.map((readBook) => (
               <ReadBookList
                 key={readBook.bookId}
@@ -105,7 +106,7 @@ const ListedBook = () => {
               ></ReadBookList>
             ))}
           </TabPanel>
-          <TabPanel>
+          <TabPanel className="mx-2">
             {wishSortBook.map((readBook) => (
               <WishBookList key={readBook.bookId} readBook={readBook}></WishBookList>
             ))}

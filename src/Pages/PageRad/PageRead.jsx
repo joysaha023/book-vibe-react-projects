@@ -78,7 +78,7 @@ const data = [
   return (
     <div className='max-w-6xl mx-auto w-full h-screen flex justify-center items-center'>
         <BarChart
-      width={600}
+      width={800}
       height={400}
       data={readBookList}
       margin={{
