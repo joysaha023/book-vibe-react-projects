@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Hashtag from "../../components/HashTag/Hashtag";
 import { saveDataToLocalStorage } from "../../utilites/LocalStorage";
 import { toast } from "react-toastify";
+import { saveDataToWishLocalStorage } from "../../utilites/LocalStorageWish";
 
 
 
@@ -12,13 +13,14 @@ const BookDetails = () => {
   const idInt = parseInt(id);
   const books = useLoaderData();
   const book = books.find((book) => book.bookId === idInt);
-  
 
   const handleReadBook = () => {
     saveDataToLocalStorage(book);
-    
   }
 
+  const handleWishlistBook = () => {
+    saveDataToWishLocalStorage(book)
+  }
 
   return (
     <div className="max-w-6xl mx-auto my-4">
@@ -68,7 +70,7 @@ const BookDetails = () => {
           </div>
           <div className="card-actions mt-2 justify-start">
             <button onClick={handleReadBook} className="btn btn-ghost border border-black hover:text-white hover:bg-[#23BE0A] btn-primary">Read</button>
-            <button className="btn bg-[#50B1C9] text-white  hover:text-black">Watch</button>
+            <button onClick={handleWishlistBook} className="btn bg-[#50B1C9] text-white  hover:text-black">Wishlist</button>
           </div>
         </div>
        
