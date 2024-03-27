@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 const ReadBookList = ({ readBook }) => {
   return (
     <div className="max-w-6xl mx-auto my-6 ">
-      <div className="card card-side bg-base-100 shadow-none border">
+      <div className="card md:card-side bg-base-100 shadow-none border">
         <figure className="bg-[#F3F3F3] p-6 m-6 rounded-lg py-4">
           <img src={readBook.image} alt={readBook.bookName} />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{readBook.bookName}</h2>
           <span>{readBook.author}</span>
-          <div className="flex gap-6 items-center">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-6 items-center">
             <div className="flex  gap-3">
               <h2 className="text-base font-bold">Tag</h2>
               {readBook.tags.map((tag, idx) => (

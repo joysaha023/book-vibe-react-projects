@@ -19,7 +19,13 @@ const BookDetails = () => {
   }
 
   const handleWishlistBook = () => {
-    saveDataToWishLocalStorage(book)
+    const savewishData = JSON.parse(localStorage.getItem("book")) || [];
+    const wishDataexist = savewishData.find((item) => item.bookId == book.bookId)
+    if(wishDataexist){
+      toast.warning('already exist readbook list')
+    } else {
+      saveDataToWishLocalStorage(book)
+    }
   }
 
   return (
