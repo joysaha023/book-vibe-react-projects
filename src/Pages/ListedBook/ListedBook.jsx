@@ -13,21 +13,31 @@ const ListedBook = () => {
   const [readBooksData, setreadBookData] = useState([]);
   const [sortBookData, setSortBookData] = useState([]);
   const [wishBookData, setWishBookData] = useState([]);
+  const [wishSortBook, setWishSortBook] = useState([]);
 
   const handleSortBookData = (filter) => {
     if (filter === "all") {
       setSortBookData(readBooksData);
+      setWishSortBook(wishBookData);
     } else if (filter === "rating") {
       const temp = readBooksData.sort((a, b) => b.rating - a.rating);
+      const temp2 = wishBookData.sort((a, b) => b.rating - a.rating);
       setSortBookData(temp);
+      setWishSortBook(temp2);
     } else if (filter === "pages") {
       const pages = readBooksData.sort((a, b) => b.totalPages - a.totalPages);
+      const pages2 = wishBookData.sort((a, b) => b.totalPages - a.totalPages);
       setSortBookData(pages);
+      setWishSortBook(pages2)
     } else if (filter === "year") {
       const year = readBooksData.sort(
         (a, b) => b.yearOfPublishing - a.yearOfPublishing
       );
+      const year2 = wishBookData.sort(
+        (a, b) => b.yearOfPublishing - a.yearOfPublishing
+      );
       setSortBookData(year);
+      setWishSortBook(year2)
     }
   };
 
@@ -40,6 +50,7 @@ const ListedBook = () => {
   useEffect(() => {
     const wishData = getDataFromWishLocal();
     setWishBookData(wishData);
+    setWishSortBook(wishData)
   }, [])
 
   const links = (
@@ -95,7 +106,7 @@ const ListedBook = () => {
             ))}
           </TabPanel>
           <TabPanel>
-            {wishBookData.map((readBook) => (
+            {wishSortBook.map((readBook) => (
               <WishBookList key={readBook.bookId} readBook={readBook}></WishBookList>
             ))}
           </TabPanel>
