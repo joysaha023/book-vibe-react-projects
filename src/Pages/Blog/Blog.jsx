@@ -5,7 +5,7 @@ import BlogCard from '../../components/BlogCard/BlogCard';
 const Blog = () => {
     const blogs = useLoaderData();
     return (
-        <div className='max-w-6xl mx-auto mt-5'>
+        <div className='max-w-6xl mx-auto my-5'>
             <div className='text-center'>
                 <h2 className='text-3xl font-bold'>The Blogs</h2>
                 <p className='text-base font-medium mt-3'>You can read blog from here. and know more about us and know about reading book. read blog and enjoy.</p>
